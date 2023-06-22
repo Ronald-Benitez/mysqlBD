@@ -114,7 +114,7 @@ router.get("/boleto", async (req, res) => {
   try {
     const pasajerosAtrasados = await prisma.pasajeros_atrasados.findMany({
       include: {
-        boleto: true, // Realiza el inner join con la tabla boleto
+        boleto: true,
       },
     });
     res.json(pasajerosAtrasados);

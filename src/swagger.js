@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "http://localhost:4000",
         description: "Desarrollo",
       },
     ],
@@ -19,7 +19,7 @@ const options = {
 };
 
 const specs = swaggerJsdoc(options);
-console.log("Documentación generada en http://localhost:3000/api-docs");
+console.log("Documentación generada en http://localhost:4000/api-docs");
 
 module.exports = (app) => {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));

@@ -12,7 +12,7 @@ app.use("/api", api);
 
 setupSwagger(app);
 
-const port = 3000;
+const port = 4000;
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);

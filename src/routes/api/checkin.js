@@ -192,9 +192,7 @@ router.get("/n_vuelo/:n_vuelo", async (req, res) => {
   try {
     const checkin = await prisma.checkin.findMany({
       where: {
-        boleto: {
-          n_vuelo: req.params.n_vuelo,
-        },
+        n_vuelo: req.params.n_vuelo,
       },
     });
     res.json(checkin);
